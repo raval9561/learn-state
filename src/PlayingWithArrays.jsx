@@ -12,6 +12,10 @@ const addArary = (arrItem,arrIndex) => {
    
 
 };
+const updateArray = () => {
+    const newArr = [...myArray.slice(0,index),item,...myArray.slice(index+1)];
+    setMyArray(newArr);
+};
 
 
     return(
@@ -23,7 +27,7 @@ const addArary = (arrItem,arrIndex) => {
       <input type="number" onChange={function(e){setIndex(parseInt(e.target.value))}}/>
       <br/>
       <input type="button" value="Add" onClick={()=>{addArary(item,index)}}/>
-      <input type="button" value="Update"/>
+      <input type="button" value="Update" onClick={()=>{updateArray}}/>
         <input type="button" value="Delete"/>
         
 
